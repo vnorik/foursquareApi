@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
-const NODE_ENV = process.env.WEBPACK_ENV || process.env.NODE_ENV || 'development';
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
 const env = {
     dev: NODE_ENV === 'development',
