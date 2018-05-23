@@ -70,6 +70,10 @@ div#resultsView {
                 margin-left: 1%;
                 position: relative;
 
+                .photoContainer {
+                    background: #ccc;
+                }
+
                 .photoContainer img {
                     height: 128px;
                     padding: 0;

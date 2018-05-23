@@ -21,17 +21,17 @@ const renderVenues = (data = {}) => {
 
 
 const getVenuesListContent = (venues) => {
-    console.log(venues);
+
+    if (venues[0].items.length === 0) {
+        return document.getElementById('noVenuesItem').innerHTML;
+    }
+
     let venueItemTmpl = document.getElementById('venueItem').innerHTML;
     let venueListHtml = '';
 
-    if (venues[0].items.length === 0) {
-        return;
-    }
-
     venues[0].items.forEach((item) => {
         let venue = item.venue;
-        let venueMainPhoto = venue.photos.groups[0].items[0];
+        let venueMainPhoto = venue.photos.count === 0 ? '' : venue.photos.groups[0].items[0];
         let tmplData = {
             VENUE_URL: venue.url || '#',
             VENUE_NAME: venue.name,

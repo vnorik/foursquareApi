@@ -51,4 +51,5 @@ Deployed version can be found by the URL:
 * show more Venues functionality with the offset parameter
 * use the template engine like handlebars or pug. If Application will grow switch to the React framework for example
 * show more venue details
+* responsive mobile friendly layout
 * nicer look and feel
