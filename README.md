@@ -5,7 +5,7 @@ Give user the ability to adjust the search based on the available filters
 
 ## Overview
 
-### Web Application build based on the next flow:
+### Web Application build flow
 * Request users current location
 * Get the list of venues based on created Foursquare Application credentials
 * Show the list of available venues
