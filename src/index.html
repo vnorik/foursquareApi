@@ -1,0 +1,102 @@
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foursquare</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="resultContainer clearfix">
+        <div id="filtersView">
+            <ul id="filtersList">
+                <li>
+                    <h4>Filters</h4>
+                </li>
+                <li>
+                    <label>
+                        <input class="venueFilterItem" name="openNow" type="checkbox" value="1" data-type="single"> Open Now
+                    </label>
+                </li>
+                <li>
+                    <h5 class="filterTitle">What are you looking for?</h5>
+                    <label>
+                        <input class="venueFilterItem" type="radio" name="section" value="food" data-type="single"> Food
+                    </label><br>
+                    <label>
+                        <input class="venueFilterItem" type="radio" name="section" value="drinks" data-type="single"> Drinks
+                    </label><br>
+                    <label>
+                        <input class="venueFilterItem" type="radio" name="section" value="coffee" data-type="single" /> Coffee
+                    </label><br>
+                    <label>
+                        <input class="venueFilterItem" type="radio" name="section" value="shops" data-type="single" /> Shops
+                    </label><br>
+                </li>
+                <li>
+                    <h5 class="filterTitle">Price</h5>
+                    <label>
+                        <input class="venueFilterItem" type="checkbox" name="price" value="1" data-type="multiple"> $
+                    </label><br>
+                    <label>
+                        <input class="venueFilterItem" type="checkbox" name="price" value="2" data-type="multiple"> $$
+                    </label><br>
+                    <label>
+                        <input class="venueFilterItem" type="checkbox" name="price" value="3" data-type="multiple" /> $$$
+                    </label><br>
+                    <label>
+                        <input class="venueFilterItem" type="checkbox" name="price" value="4" data-type="multiple" /> $$$$
+                    </label><br>
+                </li>
+            </ul>
+        </div>
+        <div id="resultsView">
+            <ul id="recommendationsList">
+            </ul>
+        </div>
+    </div>
+    <template id="venueItem">
+        <li class="card clearfix">
+            <div class="infoCol">
+                <div class="venueBlock">
+                    <div class="venueDetails">
+                        <div class="venueName">
+                            <h4>
+                                <a href="VENUE_URL" target="_blank">
+                                    VENUE_NAME
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="venueMeta">
+                            <div class="venueScore" title="" style="background: VENUE_SCORE_COLOR">VENUE_SCORE</div>
+                            <div class="venueAddressData">
+                                <div class="venueAddress">
+                                    VENUE_ADDRESS
+                                </div>
+                                <div class="venueData">
+                                            <span class="venueDataItem">
+                                                <span class="categoryName">VENUE_CATEGORY</span>
+                                                <span class="delim">&#183;</span>
+                                            </span>
+                                    <span class="venueDataItem">
+                                        <span class="price" title="">
+                                            Price: VENUE_PRICE
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="photoCol">
+                <div class="photoContainer">
+                    <img class="photo" src="VENUE_PHOTO" width="300" height="300">
+                </div>
+            </div>
+        </li>
+    </template>
+</body>
+</html>
