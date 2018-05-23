@@ -18,7 +18,7 @@ Give user the ability to adjust the search based on the available filters
 * main.js - main JS file that initiate all functionality
 
 Application is done with Vanilla JS based on ES6 standart.
-Build with webpack + babel
+Build with webpack + babel.
 
 ## Running locally
 
