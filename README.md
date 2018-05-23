@@ -48,7 +48,7 @@ Deployed version can be found by the URL:
 * create more environment to build/watch - local/dev/staging/production
 * when Applicaiton will grow split the html/js/css per components, now only the main allocated under src
 * use more filters, render the recommended dynamic filters from the Foursquare API
-* show more Venues feature with the offset parameter
+* show more Venues functionality with the offset parameter
 * use the template engine like handlebars or pug. If Application will grow switch to the React framework for example
 * show more venue details
 * nicer look and feel
