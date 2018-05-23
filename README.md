@@ -28,7 +28,7 @@ To run the project on your local simple run the following command form the proje
 npm run build
 ```
 
-index.html would be available under build foldar.
+index.html would be available under the build folder.
 
 For the dev purposes watch script is in place by running
 
