@@ -2,17 +2,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
-const NODE_ENV = process.env.NODE_ENV || 'development';
+const NODE_ENV = process.env.WEBPACK_ENV || process.env.NODE_ENV || 'development';
 
 const env = {
     dev: NODE_ENV === 'development',
     production: NODE_ENV === 'production',
 };
 
+console.log(env);
+
 module.exports = {
     mode: NODE_ENV || 'development',
     entry: [
-        env.dev ? 'webpack-dev-server/client?http://localhost:8080' : '',
+        ...env.dev ? [
+            'webpack-dev-server/client?http://localhost:8080',
+        ] : [],
         path.join(__dirname, 'src/main.js')
     ],
     output: {
