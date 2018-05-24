@@ -33,14 +33,14 @@ const getVenuesListContent = (venues) => {
         let venue = item.venue;
         let venueMainPhoto = venue.photos.count === 0 ? '' : venue.photos.groups[0].items[0];
         let tmplData = {
-            VENUE_URL: venue.url || '#',
-            VENUE_NAME: venue.name,
-            VENUE_SCORE_COLOR: `#${venue.ratingColor}`,
-            VENUE_SCORE: venue.rating,
-            VENUE_ADDRESS: venue.location && venue.location.formattedAddress.join(', '),
-            VENUE_CATEGORY: venue.categories && venue.categories[0] && venue.categories[0].name,
-            VENUE_PRICE: (venue.price && venue.price.message) || '-',
-            VENUE_PHOTO: `${venueMainPhoto.prefix}300x300${venueMainPhoto.suffix}`
+            TMPL_VENUE_URL: venue.url || '#',
+            TMPL_VENUE_NAME: venue.name,
+            TMPL_VENUE_SCORE_COLOR: `#${venue.ratingColor}`,
+            TMPL_VENUE_SCORE: venue.rating,
+            TMPL_VENUE_ADDRESS: venue.location && venue.location.formattedAddress.join(', '),
+            TMPL_VENUE_CATEGORY: venue.categories && venue.categories[0] && venue.categories[0].name,
+            TMPL_VENUE_PRICE: (venue.price && venue.price.message) || '-',
+            TMPL_VENUE_PHOTO: venueMainPhoto ? `${venueMainPhoto.prefix}300x300${venueMainPhoto.suffix}` : ''
         };
         let itemTemplate = venueItemTmpl;
         Object.keys(tmplData).map(function (key) {
