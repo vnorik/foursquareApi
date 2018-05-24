@@ -9,8 +9,6 @@ const env = {
     production: NODE_ENV === 'production',
 };
 
-console.log(env);
-
 module.exports = {
     mode: NODE_ENV || 'development',
     entry: [
