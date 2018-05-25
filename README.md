@@ -46,6 +46,7 @@ Deployed version can be found by the URL:
 
 ## Future improvements
 * create more environment to build/watch - local/dev/staging/production
+* errors handling improvements
 * when Applicaiton will grow split the html/js/css per components, now only the main allocated under src
 * use more filters, render the recommended dynamic filters from the Foursquare API
 * show more Venues functionality with the offset parameter
